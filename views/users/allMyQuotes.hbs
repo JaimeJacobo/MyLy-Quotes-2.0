@@ -1,0 +1,15 @@
+
+
+<div id="quotebooksDiv">
+    <span class="letter" data-letter="Q">Quotebooks</span>
+  <div id="allTheUserQuotebooks">
+    {{#each quotes}}
+        
+          <a href="/user/quotes/details/{{this._id}}" id="linksQuotebooks"><div class="card">{{this.name}}</div></a>
+        
+    {{/each}}
+  </div> 
+</div>
+
+
+

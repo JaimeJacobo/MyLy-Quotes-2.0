@@ -1,0 +1,23 @@
+<div id="LogoAndSubtitle">
+  <div>
+    {{#if message}}
+    <div class="alert alert-success">
+      <p id="message">{{message}}</p>
+    </div>
+    {{/if}}
+  </div>
+  <div id="mainLogoDiv">
+    <img src="../images/JaimeLogo2.png" alt="" id="mainLogo">
+  </div>
+  <div id="subtitleLogo">
+    <p>It doesn't matter if you like Queen, Eminem or Justin Bieber. This is the perfect place for you to keep your favourite lyrics quotes all together in one app.</p>
+  </div>
+  {{#if user}}
+  {{else}}
+  <div id="subtitleLogo">
+    <button type="button" class="btn btn-light"><a href="user/login">Log In</a></button>
+    <button type="button" class="btn btn-light"><a href="user/signup">Sign Up</a></button>
+  </div>
+  {{/if}}
+</div>
+

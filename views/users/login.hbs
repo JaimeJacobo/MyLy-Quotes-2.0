@@ -1,0 +1,40 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<div class="container">
+  <div class="login-signup">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <div class="row">
+          <div class="col-sm-6 mobile-pull">
+            <article role="login">
+              <h3 class="text-center" id="createYourUserText">Log in to your account</h3>
+              <form action="/user/login" method="POST">
+                 <div class="form-group">
+                   <input type="text" class="form-control" placeholder="Username" name="username">
+                </div>
+                <div class="form-group">
+                   <input type="password" class="form-control" placeholder="Password" name="password">
+                 </div>
+                <div class="form-group">
+                   <div class="checkbox">
+                  </div>
+                 </div>
+                {{#if message}}
+                  <div class="error-message" id="errorMessageLogIn">{{ message }}</div>
+                {{/if}}
+                <div class="form-group">
+                   <input type="submit" class="btn btn-success btn-block"  value="Log In">
+                </div>
+              </form>
+            </article>
+          </div>
+          <div class="col-sm-6 mobile-pull" id="animationTextDiv">
+            <h1 id="animationText">
+              <p class="typewrite smallerText" data-period="1000" data-type='[ "Every little thing is gonna be alright -- Bob Marley", "I will survive! -- Gloria Gaynor", "And I think to myself.. What a wonderful world -- Louis Armstrong", "We are the champions, my friends -- Queen", "I can live, with or without you -- U2" ]'><span class="wrap"></span></p>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

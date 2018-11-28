@@ -1,0 +1,64 @@
+{{!-- 
+
+<form action="/user/signup" method="POST">
+  Username:<br>
+  <input type="text" name="username">
+  <br>
+  Image:<br>
+  <input type="text" name="image">
+  <br>
+  Password:<br>
+  <input type="text" name="password">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>  --}}
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<div class="container">
+  <div class="login-signup">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <div class="row">
+          <div class="col-sm-6 mobile-pull login">
+            <article role="login">
+              <h3 class="text-center" id="createYourUserText">Create your User - It's Free!</h3>
+              <form action="/user/signup" method="POST">
+                 <div class="form-group">
+                   <input type="text" class="form-control" placeholder="Username" name="username" required>
+                </div>
+                <div class="form-group">
+                   <input type="password" class="form-control" placeholder="Password" name="password" required>
+                 </div>
+                <div class="form-group">
+                   <input type="password" class="form-control" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                   <div class="checkbox">
+                     <label>
+                      <input type="checkbox" required> Check this box if you promise to have a good time while using this app :)
+                    </label>
+                  </div>
+                 </div>
+                <div class="form-group">
+                   <input type="submit" class="btn btn-success btn-block"  value="Submit">
+                </div>
+               </form>
+            </article>
+          </div>
+          <div class="col-sm-6 mobile-pull" id="animationTextDiv">
+            <h1 id="animationText">
+              <p class="typewrite smallerText" data-period="1000" data-type='[ "Every little thing is gonna be alright -- Bob Marley", "I will survive! -- Gloria Gaynor", "And I think to myself.. What a wonderful world -- Louis Armstrong", "We are the champions, my friends -- Queen", "I can live, with or without you -- U2" ]'><span class="wrap"></span></p>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{#if message}}
+<h1>{{message}}</h1>
+{{/if}}
+
