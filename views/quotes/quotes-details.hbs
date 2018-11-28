@@ -8,10 +8,12 @@
 
 <div class="text-center" id="allTheQuotes">
   {{#each quotebook.quotes}}
-    <div>
-      <h3>Quote: {{this.name}}</h3>
-      <h4>Said By: {{this.artist}}</h4>
-      <h4>In Song: {{this.song}}</h4>
+    <div class="secondCard">
+      <p class="colorBlue italic">" {{this.name}} "</p>
+        <hr>
+      <p class="colorBlue flexedSized"><img id="microphoneImage" src="/../images/microphone.png" alt=""> {{this.artist}}</p>
+      <p class="colorBlue flexedSized"><img id="noteImage" src="/../images/note.png" alt=""> {{this.song}}</p>
+      {{!-- <p class="colorBlue">In Song: {{this.song}}</p> --}}
       <form action="/user/deleteQuote/{{this._id}}/{{this.quotebook}}" method="post">
         <button>Delete This Quote</button>
       </form>
