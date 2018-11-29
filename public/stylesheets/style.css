@@ -10,11 +10,21 @@ a {
 .font {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif; }
 
+.flexIcons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 111px; }
+
 .navbar {
   font: 14px "Short Stack", "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 #cross {
   font-size: 25px;
+  color: tomato; }
+
+#pencil {
+  height: 25px;
   color: tomato; }
 
 #deleteFontSize {

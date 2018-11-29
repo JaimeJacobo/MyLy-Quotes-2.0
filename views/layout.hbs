@@ -17,9 +17,13 @@
 </head>
 <body>
 
-  <div id="navbar" >
-    <nav class="navbar navbar-expand-lg navbar-light " id="navbarPrueba"  style="background-color: rgb(224,237,251);" >
-  <a class="navbar-brand" href="/"><img src="/images/LogoCircular.png" alt="" id="logoImage"></a>
+  <div id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbarPrueba"  style="background-color: rgb(224,237,251);" >
+      {{#if user}}
+        <a class="navbar-brand" href="/user/profile"><img src="/images/LogoCircular.png" alt="" id="logoImage"></a> 
+      {{else}}
+        <a class="navbar-brand" href="/"><img src="/images/LogoCircular.png" alt="" id="logoImage"></a> 
+      {{/if}}
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
