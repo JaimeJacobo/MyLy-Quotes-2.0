@@ -3,25 +3,24 @@
 
 <div id="contentOfDetails">
   <div>
-  <h3 class="text-center">{{quotebook.name}}</h3>
+  <h3 class="text-center" id="quotebookName">{{quotebook.name}}</h3>
 </div>
 
 <div class="text-center" id="allTheQuotes">
   {{#each quotebook.quotes}}
     <div class="secondCard">
-      <p class="colorBlue italic">" {{this.name}} "</p>
+      <p class="colorBlue italic">"{{this.name}}"</p>
         <hr>
-      <p class="colorBlue flexedSized"><img id="microphoneImage" src="/../images/microphone.png" alt=""> {{this.artist}}</p>
       <p class="colorBlue flexedSized"><img id="noteImage" src="/../images/note.png" alt=""> {{this.song}}</p>
-      {{!-- <p class="colorBlue">In Song: {{this.song}}</p> --}}
+      <p class="colorBlue flexedSized"><img id="microphoneImage" src="/../images/microphone.png" alt=""> {{this.artist}}</p>
       <form action="/user/deleteQuote/{{this._id}}/{{this.quotebook}}" method="post">
-        <button>Delete This Quote</button>
+        <button class="close" aria-label="Close"><span id="cross" aria-hidden="true">&times;</span></button>
       </form>
     </div>
   {{/each}}
 </div>
 
-<form action="/user/addQuote/{{quotebook._id}}" method="post" class="text-center">
+{{!-- <form action="/user/addQuote/{{quotebook._id}}" method="post" class="text-center">
   <label for="addQuoteInput">Add Your Quote</label>
   <input id="addQuoteInput" type="text" name="quoteInput" />
   <br />
@@ -39,7 +38,41 @@
 
 <form action="/user/deleteQuotebook/{{quotebook._id}}" method="post" class="text-center">
   <button>Delete This QuoteBook</button>
-</form>
+</form> --}}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<div class="container" id="addNewQuote">
+  <div class="login-signup flexCentered">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <div class="row" id="createAccountInside">
+          <div class="col-sm-12 mobile-pull login">
+            <article role="login">
+              <h4 class="text-center" id="createYourUserText">Create Quote</h4>
+              <form action="/user/addQuote/{{quotebook._id}}" method="POST">
+                 <div class="form-group">
+                   <input type="text" class="form-control" placeholder="Quote" name="quoteInput" required>
+                </div>
+                <div class="form-group">
+                   <input type="text" class="form-control" placeholder="Song" name="songInput" required>
+                 </div>
+                <div class="form-group">
+                   <input type="text" class="form-control" placeholder="Artist/Band" name="artistInput">
+                </div>
+                <div class="form-group">
+                   <input type="submit" class="btn btn-success btn-block"  value="Submit">
+                </div>
+               </form>
+               <form action="/user/deleteQuotebook/{{quotebook._id}}" method="post" class="text-center">
+                <button class="btn btn-danger" id="deleteFontSize">Delete Quotebook</button>
+               </form>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 

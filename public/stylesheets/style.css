@@ -13,6 +13,18 @@ a {
 .navbar {
   font: 14px "Short Stack", "Lucida Grande", Helvetica, Arial, sans-serif; }
 
+#cross {
+  font-size: 25px;
+  color: tomato; }
+
+#deleteFontSize {
+  font-size: 12px; }
+
+#quotebookName {
+  font-family: "Short Stack", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  color: #3a6ca0; }
+
 #navbarSupportedContent a {
   padding: 0 20px; }
 
@@ -86,6 +98,11 @@ a {
 
 #contentNewQuote h1 {
   margin-bottom: 50px; }
+
+.flexCentered {
+  display: flex;
+  align-content: center;
+  justify-content: center; }
 
 #animationText {
   text-align: center;
@@ -221,8 +238,13 @@ div.foo {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  height: 80vh; }
+  flex-direction: column; }
+
+#addNewQuote {
+  margin-top: 54px; }
+
+#createAccountInside {
+  width: 300px; }
 
 #allTheQuotes {
   display: flex;
