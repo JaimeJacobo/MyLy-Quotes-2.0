@@ -152,4 +152,8 @@ $(".loading").click(()=>{
   
 });
 
+$('#cross').click(()=>{
+  alert('are you sure?');
+})
+
 

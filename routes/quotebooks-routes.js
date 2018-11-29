@@ -101,6 +101,10 @@ router.post('/deleteQuotebook/:id', (req, res, next) => {
   })
 })
 
+router.get("/edit-quote", ensureLogin.ensureLoggedIn('/user/login'), (req, res) => { 
+  res.render("quotes/edit-quote", { user: req.user });
+});
+
 // /user/deleteQuotebook/{{quotebook._id}}
 
 

@@ -71,6 +71,8 @@ router.get("/profile", ensureLogin.ensureLoggedIn('/user/login'), (req, res) => 
 
 
 
+
+
 module.exports = router;
 
 
