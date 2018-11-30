@@ -101,9 +101,33 @@ router.post('/deleteQuotebook/:id', (req, res, next) => {
   })
 })
 
-router.get("/edit-quote", ensureLogin.ensureLoggedIn('/user/login'), (req, res) => { 
-  res.render("quotes/edit-quote", { user: req.user });
+router.get("/edit-quote/:id", ensureLogin.ensureLoggedIn('/user/login'), (req, res) => { 
+  Quote.findById(req.params.id)
+  .then(quoteToEdit => {
+    res.render("quotes/edit-quote", {quote: quoteToEdit});
+  })
+  .catch(err => {
+    next(err);
+  })
 });
+
+router.post("/editQuote/:id", (req, res, next)=>{
+  Quote.findByIdAndUpdate(req.params.id, req.body)
+  .then((updatedQuote)=>{
+    Quotebook.findById(updatedQuote.quotebook).populate('quotes')
+    .then(quotebookFromDB => {
+    console.log("============ ", quotebookFromDB);
+    res.render('quotes/quotes-details', {quotebook: quotebookFromDB});
+    })
+    .catch(err => {
+      next(err);
+    })
+  })
+  .catch((err)=>{
+    next(err)
+  })
+})
+
 
 // /user/deleteQuotebook/{{quotebook._id}}
 

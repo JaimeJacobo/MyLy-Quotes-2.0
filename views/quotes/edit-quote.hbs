@@ -1,1 +1,51 @@
-<h1>Edit Quote</h1>
+
+
+
+<div id="contentOfDetails">
+  <div>
+  <h3 class="text-center" id="quotebookName">Edit Quote</h3>
+</div>
+
+<div class="text-center" id="allTheQuotes">
+    <div class="secondCard">
+      <p class="colorBlue italic">"{{quote.name}}"</p>
+        <hr>
+      <p class="colorBlue flexedSized"><img id="noteImage" src="/../images/note.png" alt=""> {{quote.song}}</p>
+      <p class="colorBlue flexedSized"><img id="microphoneImage" src="/../images/microphone.png" alt=""> {{quote.artist}}</p>
+      
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<div class="container" id="addNewQuote">
+  <div class="login-signup flexCentered">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <div class="row" id="createAccountInside">
+          <div class="col-sm-12 mobile-pull login">
+            <article role="login">
+              <h4 class="text-center" id="createYourUserText">Edit Quote</h4>
+              <form action="/user/editQuote/{{quote._id}}" method="POST">
+                 <div class="form-group">
+                   <input type="text" class="form-control" name="name" value="{{quote.name}}"required>
+                </div>
+                <div class="form-group">
+                   <input type="text" class="form-control" name="song" value="{{quote.song}}" required>
+                 </div>
+                <div class="form-group">
+                   <input type="text" class="form-control" name="artis" value="{{quote.artist}}" required>
+                </div>
+                <div class="form-group">
+                   <input type="submit" class="btn btn-success btn-block"  value="Edit">
+                </div>
+               </form>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

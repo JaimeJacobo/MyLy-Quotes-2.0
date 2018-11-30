@@ -8,6 +8,8 @@ const quoteSchema = new Schema({
 name: String,
 song: String,
 artist: String,
-quotebook: Schema.Types.ObjectId}, {timestamps: true})
+quotebook: {type: Schema.Types.ObjectId, ref: "Quotebook"}
+}, 
+{timestamps: true})
 
 module.exports = mongoose.model('Quote', quoteSchema);
