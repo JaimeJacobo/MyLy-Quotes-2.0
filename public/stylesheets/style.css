@@ -196,7 +196,8 @@ div.foo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  max-width: 73vw; }
 
 .card {
   color: #3a6ca0;
@@ -256,11 +257,12 @@ div.foo {
 #createAccountInside {
   width: 300px; }
 
-#allTheQuotes {
+.allTheQuotes {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  max-width: 80vw; }
 
 @-webkit-keyframes rotation {
   from {

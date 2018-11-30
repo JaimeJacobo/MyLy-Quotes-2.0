@@ -265,6 +265,7 @@ div.foo{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  max-width: 73vw;
 }
 
 
@@ -338,11 +339,12 @@ div.foo{
   width: 300px;
 }
 
-#allTheQuotes {
+.allTheQuotes {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 80vw;
 }
 
 @-webkit-keyframes rotation {

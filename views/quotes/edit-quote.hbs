@@ -6,7 +6,7 @@
   <h3 class="text-center" id="quotebookName">Edit Quote</h3>
 </div>
 
-<div class="text-center" id="allTheQuotes">
+<div class="text-center allTheQuotes">
     <div class="secondCard">
       <p class="colorBlue italic">"{{quote.name}}"</p>
         <hr>
@@ -25,7 +25,7 @@
         <div class="row" id="createAccountInside">
           <div class="col-sm-12 mobile-pull login">
             <article role="login">
-              <h4 class="text-center" id="createYourUserText">Edit Quote</h4>
+              <h4 class="text-center" id="createYourUserText">Insert new values</h4>
               <form action="/user/editQuote/{{quote._id}}" method="POST">
                  <div class="form-group">
                    <input type="text" class="form-control" name="name" value="{{quote.name}}"required>
